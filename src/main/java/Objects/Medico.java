@@ -1,4 +1,4 @@
-package objects;
+package Objects;
 
 public class Medico {
     private String id;
