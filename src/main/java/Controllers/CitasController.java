@@ -81,7 +81,6 @@ public class CitasController {
     }
 
     private void cargarComboBoxes() {
-        // Cargar pacientes
         List<Paciente> pacientes = pacienteRepository.getPacientes();
         cmbPaciente.setItems(FXCollections.observableArrayList(pacientes));
         cmbPaciente.setConverter(new javafx.util.StringConverter<Paciente>() {
@@ -96,7 +95,6 @@ public class CitasController {
             }
         });
 
-        // Cargar médicos
         List<Medico> medicos = medicoRepository.getMedicos();
         cmbMedico.setItems(FXCollections.observableArrayList(medicos));
         cmbMedico.setConverter(new javafx.util.StringConverter<Medico>() {
@@ -113,7 +111,6 @@ public class CitasController {
     }
 
     private void configurarListeners() {
-        // Actualizar precio cuando se seleccione un médico
         cmbMedico.setOnAction(event -> {
             Medico medico = cmbMedico.getSelectionModel().getSelectedItem();
             if (medico != null) {
@@ -141,13 +138,11 @@ public class CitasController {
             LocalDate fecha = dateSelector.getValue();
             LocalTime hora = LocalTime.parse(lblHora.getText());
 
-            // Verificar disponibilidad
             if (existeCitaEnFechaHora(medico, fecha, hora)) {
                 mostrarAlerta("Error", "El médico ya tiene una cita agendada en esa fecha y hora.", Alert.AlertType.WARNING);
                 return;
             }
 
-            // Crear nueva cita
             DetalleCita detalleCita = new DetalleCita(
                     fecha,
                     paciente.getName(),
