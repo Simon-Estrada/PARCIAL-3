@@ -6,7 +6,7 @@ public class Medico {
     private String price;
     private String email;
 
-    public Cliente(String id, String name, String phone, String email) {
+    public Medico(String id, String name, String price, String email) {
         this.id = id;
         this.name = name;
         this.price = price;
@@ -47,7 +47,7 @@ public class Medico {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Objects.Paciente{");
+        final StringBuilder sb = new StringBuilder("Objects.Medico{");
         sb.append("id='").append(getId()).append('\'');
         sb.append(", name='").append(getName()).append('\'');
         sb.append(", price='").append(getPrice()).append('\'');

@@ -6,7 +6,7 @@ public class Paciente {
     private String phone;
     private String email;
 
-    public Cliente(String id, String name, String phone, String email) {
+    public Paciente(String id, String name, String phone, String email) {
         this.id = id;
         this.name = name;
         this.phone = phone;
