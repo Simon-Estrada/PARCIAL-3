@@ -5,4 +5,6 @@ module com.example.parcial3 {
 
     opens com.example.parcial3 to javafx.fxml;
     exports com.example.parcial3;
+    exports Controllers;
+    opens Controllers to javafx.fxml;
 }
