@@ -72,9 +72,9 @@ public class MedicosTablaController {
 
     private void configurarTabla() {
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));
-        colNombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
-        colCorreo.setCellValueFactory(new PropertyValueFactory<>("correo"));
-        colPrecio.setCellValueFactory(new PropertyValueFactory<>("precio"));
+        colNombre.setCellValueFactory(new PropertyValueFactory<>("name"));
+        colCorreo.setCellValueFactory(new PropertyValueFactory<>("email"));
+        colPrecio.setCellValueFactory(new PropertyValueFactory<>("price"));
     }
 
     private void cargarMedicos() {
