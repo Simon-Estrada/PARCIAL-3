@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="594.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MedicosTablaController">
+<AnchorPane prefHeight="600.0" prefWidth="594.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MedicosTablaController">
     <children>
         <GridPane layoutX="29.0" layoutY="60.0" prefHeight="122.0" prefWidth="353.0">
             <columnConstraints>
@@ -28,11 +28,11 @@
             <children>
                 <Label text="Identificacion:" />
                 <Label text="Nombre:" GridPane.rowIndex="1" />
-                <Label text="Telefono:" GridPane.rowIndex="2" />
+                <Label text="Precio" GridPane.rowIndex="2" />
                 <Label text="Correo:" GridPane.rowIndex="3" />
                 <TextField fx:id="txtId" promptText="Ingrese su ID." GridPane.columnIndex="1" />
                 <TextField fx:id="txtNombre" promptText="Ingrese su nombre completo." GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                <TextField fx:id="txtTel" promptText="000-000-0000" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <TextField fx:id="txtPrecio" promptText="000-000-0000" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                 <TextField fx:id="txtCorreo" promptText="example@example.com" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             </children>
         </GridPane>
@@ -48,7 +48,7 @@
             <columns>
                 <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
                 <TableColumn fx:id="colNombre" prefWidth="75.0" text="Nombre" />
-                <TableColumn fx:id="colTel" prefWidth="75.0" text="Tel" />
+                <TableColumn fx:id="colPrecio" prefWidth="75.0" text="Precio" />
                 <TableColumn fx:id="colCorreo" prefWidth="75.0" text="Correo" />
             </columns>
             <columnResizePolicy>
